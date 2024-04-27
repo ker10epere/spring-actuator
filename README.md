@@ -9,12 +9,15 @@ http://localhost:8080/actuator
 
 # Running application
 
-> For windows
-> - mvnw.cmd spring-boot:run
->
-> For linux & linux-like OS
-> - mvnw spring-boot:run
->
-> Using docker compose
-> - docker compose up
-> - docker-compose up
+For windows
+
+- mvnw.cmd spring-boot:run
+
+For linux & linux-like OS
+
+- mvnw spring-boot:run
+
+Using docker compose
+
+- docker compose up
+- docker-compose up
