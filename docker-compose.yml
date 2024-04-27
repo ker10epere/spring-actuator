@@ -1,0 +1,8 @@
+services:
+  actuator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    pull_policy: build
+    ports:
+      - 8080:8080
