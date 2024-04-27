@@ -4,5 +4,11 @@ services:
       context: .
       dockerfile: Dockerfile
     pull_policy: build
+    volumes:
+      - m2:/root/.m2
     ports:
       - 8080:8080
+
+volumes:
+  m2:
+    name: m2
