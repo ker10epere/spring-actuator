@@ -1,8 +1,5 @@
 services:
   actuator:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    pull_policy: build
+    image: ker10epere/spring-actuator:0.0.1
     ports:
       - 8080:8080
