@@ -1,4 +1,4 @@
-FROM maven:eclipse-temurin@sha256:a263660b3f2d89af528c9344856121ec26d21e97f09c3f70bf823a3ae5d9c8b1
+FROM maven:3.9.6-eclipse-temurin-17-alpine@sha256:ffddac7b04101358048f872fba9d978b2a1f9647955d158c1e565233cb95577d
 
 COPY . /opt/webapp/
 
