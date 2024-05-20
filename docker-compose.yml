@@ -1,5 +1,15 @@
 services:
   actuator:
     image: ker10epere/spring-actuator:0.0.1
-    ports:
-      - 8080:8080
+    healthcheck:
+      test: [ "CMD", "wget","--output-document=-" , "http://localhost:8080/actuator" ]
+      start_period: 7s
+      interval: 2s
+      timeout: 2s
+      retries: 5
+  busybox:
+    image: busybox:stable-uclibc
+    depends_on:
+      actuator:
+        condition: service_healthy
+    entrypoint: wget -q --output-document=- actuator:8080/actuator
